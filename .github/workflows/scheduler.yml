@@ -2,7 +2,7 @@ name: Telegram Scheduler
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # каждые 5 минут
+    - cron: "*/10 * * * *"  # каждые 5 минут
   workflow_dispatch:
 
 jobs:
