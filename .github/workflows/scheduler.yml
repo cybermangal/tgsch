@@ -2,7 +2,7 @@ name: Telegram Scheduler
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # каждые 5 минут
+    - cron: "*/5 * * * *"  # каждые 5 минут
   workflow_dispatch:
 
 jobs:
@@ -19,6 +19,4 @@ jobs:
           MONGO_DB: telegram
           MONGO_COLL: tasks
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          PRUNE_DAYS_SENT: 30
-          PRUNE_DAYS_ERROR: 60
         run: python runner.py
